@@ -1,4 +1,10 @@
-.staff-card {
+@use "../../App.scss";
+
+.tracker{
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__card {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -9,13 +15,17 @@
         margin: 10px;
         width: 40%;
 
-        &__info {
+        &--info {
             text-align: left;
         }
     }
+}
 
 @media screen and (min-width: 768px) {
-    .staff-card{
+    .tracker{
+
+        &__card {
         width: 15%;
     }
+}
 }
