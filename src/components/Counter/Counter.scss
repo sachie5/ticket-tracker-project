@@ -1,0 +1,20 @@
+.counter {
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    border: 1px solid black;
+    padding: 5px;
+
+    &__heading{
+        font-size: 12px;
+        font-weight: none;
+    }
+
+    &__button {
+        display: inline-block;
+        width: 25%;
+        border: none;
+        background-color: white;
+        font-size: 20px;
+    }
+}
