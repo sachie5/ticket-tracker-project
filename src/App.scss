@@ -1,6 +1,11 @@
 .tracker{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    &__heading{
+        display: block;
+        width: 100vw;
+        text-align: center;
+    }
 }
