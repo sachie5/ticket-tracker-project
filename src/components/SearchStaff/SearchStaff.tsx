@@ -9,8 +9,8 @@ type SearchStaffProps = {
 
 const SearchStaff = ({label, searchTerm, handleInput}: SearchStaffProps) => {
     return (
-            <label htmlFor={label} className="tracker__search--label">
-                Search: <input type="text" id={label} name={label} value={searchTerm} onInput={handleInput} className="tracker__search--input"/>
+            <label htmlFor={label} className="tracker-search__staff">
+                Search: <input type="text" id={label} name={label} value={searchTerm} onInput={handleInput} className="tracker-search_-staff-input"/>
             </label>
     )
 }

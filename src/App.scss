@@ -5,10 +5,10 @@ header{
 }
 
 
-
 @media screen and (min-width: 768px) {
     header{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     
@@ -19,6 +19,10 @@ header{
 .tracker{
     display: flex;
     justify-content: space-around;
+
+    &__search{
+        display: block;
+}
 }
 }
 

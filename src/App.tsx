@@ -10,34 +10,41 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
-    const searchWord = event.currentTarget.value.;
+    const searchWord = event.currentTarget.value;
+    console.log(searchTerm)
     setSearchTerm(searchWord)
   }
-
-  const filteredStaff = staff.filter(staff => {
-    return staff.name.toLowerCase().includes(searchTerm)
-  });
 
   const [filterName, setFilterName] = useState<string>("");
 
   const handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
-    const filterRole = event.currentTarget.value;
+    const filterRole = event.currentTarget.value.replace(/-/g,"").toLowerCase();
     setFilterName(filterRole);
   }
 
-  const filteredRole = staff.filter(member => filterName === "" || filterName === member.role.trim().toLowerCase())
+  const filteredStaff = staff.filter(staff => {
+    return staff.name.toLowerCase().includes(searchTerm) && staff.role.split(" ").join("").toLowerCase().includes(filterName);
+  });
 
+/*   const filteredRole = staff.filter(member => {
+    return member.role.trim().toLowerCase()
+  })
+  console.log(filteredRole);
+ */
   return (
     <><header className="header">
       <h1 className="header__heading">Ticket Tracker</h1>
-      <SearchStaff label="Search Staff" searchTerm={searchTerm} handleInput={handleInput} />
-      <SearchRole name="Filter Role" role={filterName} handleSelect={handleSelect}/>
     </header>
-      <div className="tracker">
-        <StaffTile staff={filteredStaff} role={filteredRole}/>
-      </div></>
+      <section className="tracker">
+        <div className="tracker-search">
+          <SearchStaff label="Search Staff" searchTerm={searchTerm} handleInput={handleInput} />
+          <SearchRole name="Filter Role" filterName={filterName} handleSelect={handleSelect}/>
+        </div>
+        <StaffTile staff={filteredStaff}/>
+      </section></>
   )
-}
+};
+
 
 
 export default App;

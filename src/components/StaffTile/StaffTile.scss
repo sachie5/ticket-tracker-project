@@ -1,4 +1,5 @@
 @use "../../App.scss";
+@use "../../assets/styles/variables" as *;
 
 .tracker{
     display: flex;
@@ -8,12 +9,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        border: 1px solid black;
+        border: 1px solid #235789;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px;
         padding: 5px;
         padding-bottom: 10px;
         font-size: 14px;
         margin: 10px;
         width: 40%;
+        background-color: $card-color;
 
         &--info {
             text-align: left;
