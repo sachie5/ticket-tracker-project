@@ -3,27 +3,15 @@
 .tracker-search{
 
     &__filter{
-        display: block;
         align-self: center;
         
-
         &--label{
-            width: fit-content;
+            padding: 10px 0 5px 0;
         }
 
         &--select{
             font-size: 12px;
             width:max-content;
         }
-    }
-}
-
-@media screen and (min-width: 768px){
-    .tracker-search{
-
-        &__filter{
-            display: block;
-        }
-
     }
 }

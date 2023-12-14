@@ -7,7 +7,8 @@
     border: 1px solid black;
     border-radius: 20px;
     padding: 5px;
-    background-color: #EAEAEA;
+    background-color: $counter-color;
+    color: black;
   
 
     &__heading{
@@ -20,7 +21,8 @@
         width: 25%;
         border: 1px solid black;
         border-radius: 5px;
-        background-color: $card-color;
+        background-color: black;
+        color: $card-font;
         font-size: 20px;
     }
 }

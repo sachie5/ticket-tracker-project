@@ -4,6 +4,11 @@ header{
     justify-content: center;
 }
 
+.tracker{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 @media screen and (min-width: 768px) {
     header{
@@ -19,6 +24,7 @@ header{
 .tracker{
     display: flex;
     justify-content: space-around;
+
 
     &__search{
         display: block;

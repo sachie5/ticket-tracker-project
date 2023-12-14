@@ -11,7 +11,7 @@ type SearchRoleProps = {
 const SearchRole = ({ name, filterName, handleSelect } : SearchRoleProps) => {
     return (
         <>
-        <label className="tracker-search__filter tracker-search__filter--label" htmlFor={name}>Filter: </label>
+        <label className="tracker-search__filter tracker-search__filter--label" htmlFor={name}>Filter </label>
         <select className="tracker-search__filter tracker-search__filter--select" name={filterName} id={name} onChange={handleSelect}>
             <option value=""></option>
             <option value="junior-software-developer">Junior Software Developer</option>
