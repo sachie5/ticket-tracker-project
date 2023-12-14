@@ -1,0 +1,17 @@
+@use "../../assets/styles/variables" as *;
+
+.tracker-search{
+
+    &__filter{
+        align-self: center;
+        
+        &--label{
+            padding: 10px 0 5px 0;
+        }
+
+        &--select{
+            font-size: 12px;
+            width:max-content;
+        }
+    }
+}

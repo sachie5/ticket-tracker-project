@@ -1,21 +1,36 @@
-.staff-card {
+@use "../../App.scss";
+@use "../../assets/styles/variables" as *;
+
+.tracker{
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__card {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        border: 1px solid black;
-        padding: 5px;
-        padding-bottom: 10px;
+        border: 1px solid #235789;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px;
+        padding: 10px;
         font-size: 14px;
         margin: 10px;
-        width: 40%;
+        width: 35%;
+        background-color: $card-color;
+        color: $card-font;
 
-        &__info {
+        &--info {
             text-align: left;
+            font-size: 16px;
         }
     }
+}
 
 @media screen and (min-width: 768px) {
-    .staff-card{
-        width: 15%;
+    .tracker{
+
+        &__card {
+        width: 13%;
     }
+}
 }

@@ -1,9 +1,15 @@
+@use "../../assets/styles/variables" as *;
+
 .counter {
     align-self: center;
     text-align: center;
     width: 80%;
     border: 1px solid black;
+    border-radius: 20px;
     padding: 5px;
+    background-color: $counter-color;
+    color: black;
+  
 
     &__heading{
         font-size: 12px;
@@ -11,10 +17,12 @@
     }
 
     &__button {
-        display: inline-block;
+        justify-content: space-around;
         width: 25%;
-        border: none;
-        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: black;
+        color: $card-font;
         font-size: 20px;
     }
 }

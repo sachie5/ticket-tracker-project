@@ -1,0 +1,26 @@
+@use "../../assets/styles/variables" as *;
+
+.tracker-search{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    
+    &__staff{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .tracker-search{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+        &__staff{
+            display: block;
+            text-align: center;
+        }
+    }
+}

@@ -10,9 +10,9 @@ type StaffTileProps = {
 const StaffTile = ({ staff }: StaffTileProps) => {
     return (
         staff.map(member => (
-            <div className="staff-card">
-            <p className="staff-card__info staff-card__info--name"  >Name : {member.name}</p>
-            <p className="staff-card__info staff-card__info--role" >Role: {member.role}</p>
+        <div className="tracker__card" key={member.id}>
+            <p className="tracker__card--info"  >Name : {member.name}</p>
+            <p className="tracker__card--info" >Role: {member.role}</p>
             <Counter heading="Counter" />
         </div>
         ))
