@@ -11,26 +11,21 @@ const App = () => {
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
     const searchWord = event.currentTarget.value;
-    console.log(searchTerm)
     setSearchTerm(searchWord)
   }
 
   const [filterName, setFilterName] = useState<string>("");
 
   const handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
-    const filterRole = event.currentTarget.value.replace(/-/g,"").toLowerCase();
+    const filterRole = event.currentTarget.value;
     setFilterName(filterRole);
+    console.log(filterName)
   }
 
   const filteredStaff = staff.filter(staff => {
     return staff.name.toLowerCase().includes(searchTerm) && staff.role.split(" ").join("").toLowerCase().includes(filterName);
   });
 
-/*   const filteredRole = staff.filter(member => {
-    return member.role.trim().toLowerCase()
-  })
-  console.log(filteredRole);
- */
   return (
     <><header className="header">
       <h1 className="header__heading">Ticket Tracker</h1>

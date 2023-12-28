@@ -1,5 +1,6 @@
 import { ChangeEventHandler } from "react";
 import "./SearchRole.scss";
+import staff from "../../data/staff";
 
 
 type SearchRoleProps = {
@@ -9,19 +10,19 @@ type SearchRoleProps = {
 };
 
 const SearchRole = ({ name, filterName, handleSelect } : SearchRoleProps) => {
+
+const staffRoles = staff.map(staff => staff.role);
+const roles = [...new Set(staffRoles)];
+console.log(roles);
+
     return (
-        <>
-        <label className="tracker-search__filter tracker-search__filter--label" htmlFor={name}>Filter </label>
+        <><label className="tracker-search__filter tracker-search__filter--label" htmlFor={name}>Filter </label>
         <select className="tracker-search__filter tracker-search__filter--select" name={filterName} id={name} onChange={handleSelect}>
-            <option value=""></option>
-            <option value="junior-software-developer">Junior Software Developer</option>
-            <option value="software-developer">Software Developer</option>
-            <option value="senior-software-developer">Senior Software Developer</option>
-            <option value="project-manager">Project Manager</option>
-            <option value="tester">Tester</option>
-            <option value="hard-man">Hard Man</option>
-        </select></>
-    )
+                <option value=""></option>
+                {roles.map (role => (<option value={role.toLowerCase().split(" ").join("")} key={role}> {role}</option>))}
+            </select>
+            </>
+        )
 }
 
 export default SearchRole;
