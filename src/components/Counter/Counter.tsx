@@ -15,6 +15,9 @@ const Counter = ({ heading }: CounterProps) => {
 
     const handleDecrement = () => {
         setCount(count - 1 );
+        if (count === 0){
+            setCount(count)
+        }
     }
 
     return(
