@@ -1,19 +1,19 @@
-## Ticket tracker Project
+# Ticket tracker Project
 
 This was a REACT project to create a ticket tracker for an employee.
 
-# Requirements
+## Requirements
 
 1. Built in REACt and TypeScript.
 2. Each component should manage its own state.
 3. Components should be generated using a map().
 
-# Extension
+## Extension
 
 1. Add a search by name box.
 2. Add a selevt by role dropdown box.
 
-# Key code
+## Key code
 
 The key bit of code is generating the StaffTile with the information from the staff data.
 
